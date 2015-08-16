@@ -1,0 +1,35 @@
+
+<!-- ==== SECTION DIVIDER1 -->
+{% macro input(title,resume, subtitle, description, image) %}
+                <section class="section-divider textdivider divider1">
+			<div class="container">
+                            <h1>{{title}}</h1>
+				<hr>
+				<p>{{resume}}</p>
+			</div><!-- container -->
+		</section><!-- section -->
+		
+		
+		<!-- ==== SERVICES ==== -->
+		<div class="container" id="services" name="services">
+			<br>
+			<br>
+			<div class="row">
+                            <h2 class="centered">{{subtitle}}</h2>
+				<hr>
+				<br>
+				<div class="col-lg-offset-2 col-lg-8">
+                                    {{description}}
+				</div><!-- col-lg -->
+			</div><!-- row -->
+			
+			<div class="row">
+				<h2 class="centered">Voila les images du lieux</h2>
+				<hr>
+				<br>
+				<div class="col-lg-offset-2 col-lg-8">
+					<img class="img-responsive" src="{{ asset(image) }}" alt="">
+				</div><!-- col -->
+			</div><!-- row -->
+		</div><!-- container -->
+ {% endmacro %}

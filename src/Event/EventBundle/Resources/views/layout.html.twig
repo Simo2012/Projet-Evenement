@@ -1,0 +1,43 @@
+{% spaceless %}
+    <!DOCTYPE html>
+    <html lang="en">
+
+        <head>
+            
+            {% include "@EventEvent/Common/header.html.twig" %}
+        </head>
+          <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+
+
+        {% block CONTENT %}{% endblock %}
+
+        <footer>
+            {% include "@EventEvent/Common/footer.html.twig" %}
+        </footer>
+        {% block JAVASCRIPT %}
+            <!-- jQuery -->
+            <script src="{{ asset("js/jquery.min.js") }}"></script>
+            <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+            <script src="{{ asset("js/retina.js") }}"></script>
+            <script src="{{ asset("js/jquery.easing.1.3.js") }}"></script>
+            <script src="{{ asset("js/smoothscroll.js") }}"></script>
+            <script src="{{ asset("js/jquery-func.js") }}"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="{{ asset("js/modernizr.custom.js") }}"></script>
+            <!-- Script to Activate the Carousel -->
+            <script>
+                $('.carousel').carousel({
+                    interval: 5000 //changes the speed
+                })
+            </script>
+
+        {% endblock %}
+
+
+    </body>
+
+</html>
+
+
+{% endspaceless %}

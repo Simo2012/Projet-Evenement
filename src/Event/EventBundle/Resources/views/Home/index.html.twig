@@ -1,0 +1,20 @@
+{% extends "@EventEvent/layout.html.twig" %}
+{% block CONTENT %}
+
+  	<div id="navbar-main">
+            {% include "@EventEvent/Common/menu.html.twig" %}
+      <!-- Fixed navbar -->
+       </div>
+      {% include "@EventEvent/home/about.html.twig" %}
+
+               {% for i in 0..3 %}
+
+                {% set path = '/bundles/eventevent/images/iphone.png'%}
+		{% import "@EventEvent/Common/event.html.twig" as forms %}
+		{{ forms.input('title' ,'resume', 'subtitle', 'description', path) }}		
+                {% endfor %}
+                {% include "@EventEvent/home/team.html.twig" %}
+                {% include "@EventEvent/home/contact.html.twig" %}
+                
+                
+{% endblock %}
