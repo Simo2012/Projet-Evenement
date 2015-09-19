@@ -6,6 +6,8 @@ namespace Event\UserBundle\Entity;
  *
  * @author Ghazi
  */
+namespace Event\UserBundle\Entity;
+
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -21,6 +23,13 @@ class User extends BaseUser
     * @ORM\GeneratedValue(strategy="AUTO")
     */
    protected $id;
+   
+   /**
+    * @var integer
+    * 
+    * @ORM\Column(name="facebookId", type="integer", nullable=true)
+    */
+   protected $facebookId;
 
    public function __construct()
    {
@@ -36,5 +45,28 @@ class User extends BaseUser
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set facebookId
+     *
+     * @param integer $facebookId
+     * @return User
+     */
+    public function setFacebookId($facebookId)
+    {
+        $this->facebookId = $facebookId;
+
+        return $this;
+    }
+
+    /**
+     * Get facebookId
+     *
+     * @return integer 
+     */
+    public function getFacebookId()
+    {
+        return $this->facebookId;
     }
 }

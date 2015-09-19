@@ -5,6 +5,15 @@
             {% include "@EventEvent/Common/menu.html.twig" %}
       <!-- Fixed navbar -->
        </div>
+      {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    Hello {{ app.user.username }}
+
+    
+        Logout
+    
+{% else %}
+    {{ render(url('hwi_oauth_connect')) }}
+{% endif %}
       {% include "@EventEvent/home/about.html.twig" %}
 
                {% for i in 0..3 %}

@@ -1,4 +1,7 @@
+parameters:
+    event.oauth.user_provider.class: Event\UserBundle\Oauth\UserProvider
+
 services:
-#    event_user.example:
-#        class: Event\UserBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    event.oauth.user_provider:
+        class: %event.oauth.user_provider.class%
+        arguments: ['@fos_user.user_manager', { facebook: facebookId }]

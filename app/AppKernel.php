@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Event\EventBundle\EventEventBundle(),
             new Event\UserBundle\EventUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
             //new FOS\FacebookBundle\FOSFacebookBundle(),
         );
 
