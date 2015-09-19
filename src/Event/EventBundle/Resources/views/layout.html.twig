@@ -1,3 +1,11 @@
+
+{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    Hello {{ app.user.username }}
+        Logout
+{% else %}
+    LogIn
+    {{ render(url('hwi_oauth_connect')) }}
+{% endif %}
 {% spaceless %}
     <!DOCTYPE html>
     <html lang="en">
